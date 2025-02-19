@@ -61,6 +61,7 @@ body, html {
 
 .center-image {
     max-width: 25%; /* Set max width to 25% */
+    min-width: 300px; /* Set minimum width */
     height: auto;
 }
 
@@ -72,6 +73,7 @@ body, html {
     cursor: pointer;
     transition: transform 0.1s ease; /* Add transition for animation */
     width: 25%; /* Set width to match the image */
+    min-width: 300px; /* Set minimum width */
 }
 
 .image-button:active {
@@ -89,6 +91,7 @@ body, html {
     gap: 15px; /* Adjust gap between the buttons */
     margin-top: 30px; /* Adjust margin above the bottom buttons */
     width: 25%; /* Set width to match the image */
+    min-width: 300px; /* Set minimum width */
 }
 
 .bottom-button {
@@ -222,17 +225,12 @@ body, html {
         right: 20px; /* Ensure the button has some distance from the images */
     }
 
-    .column-image {
-        max-width: 70%; /* Increase max width for the images on smaller screens */
+    .center-image {
+        max-width: 30%; /* Increase max width for the images on smaller screens */
     }
 
-    .social-button {
-        width: 140px; /* Adjust width for smaller screens */
-        height: 140px; /* Adjust height for smaller screens */
-    }
-
-    .email-popup-content {
-        width: 90%; /* Adjust width for smaller screens */
+    .image-button, .bottom-buttons {
+        width: 30%; /* Increase width to match the image */
     }
 }
 
@@ -250,11 +248,11 @@ body, html {
 /* Media query for smaller screens */
 @media (max-width: 600px) {
     .center-image {
-        max-width: 35%; /* Increase max width to 35% */
+        max-width: 37.5%; /* Increase max width to 37.5% (50% bigger than 25%) */
     }
 
     .image-button, .bottom-buttons {
-        width: 35%; /* Increase width to match the image */
+        width: 37.5%; /* Increase width to match the image */
     }
 
     .column-image {
@@ -268,5 +266,9 @@ body, html {
 
     .email-popup-content {
         width: 95%; /* Adjust width for smaller screens */
+    }
+
+    .bottom-button img {
+        max-width: 90%; /* Increase max width for the button images */
     }
 }
