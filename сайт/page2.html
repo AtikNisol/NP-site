@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Связь</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showEmailPopup() {
+            const popup = document.getElementById('email-popup');
+            popup.style.display = 'block';
+        }
+
+        function closeEmailPopup() {
+            const popup = document.getElementById('email-popup');
+            popup.style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button-right">
+            <img src="Стрелочка.svg" alt="Back">
+        </a>
+        <div class="social-buttons">
+            <div class="social-row">
+                <a href="https://www.instagram.com/polosinnikita/" target="_blank" class="social-button">
+                    <img src="инста.svg" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/@nikitapolosin" target="_blank" class="social-button">
+                    <img src="ютуб.svg" alt="YouTube">
+                </a>
+            </div>
+            <div class="social-row">
+                <a href="https://t.me/nikitapolosin" target="_blank" class="social-button">
+                    <img src="тг.svg" alt="Telegram">
+                </a>
+                <button class="social-button" onclick="showEmailPopup()">
+                    <img src="почта.svg" alt="Email">
+                </button>
+            </div>
+        </div>
+        <div id="email-popup" class="email-popup">
+            <div class="email-popup-content">
+                <span class="close" onclick="closeEmailPopup()">&times;</span>
+                <p>nikip204@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
